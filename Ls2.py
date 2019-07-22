@@ -73,8 +73,5 @@ for i in range(0, len(arr)):
             min = arr[j]
             ind_min = j
     if i != ind_min:
-        tmp = arr[i]
-        arr[i] = arr[ind_min]
-        arr[ind_min] = tmp
-
+        arr[i], arr[ind_min] = arr[ind_min], arr[i]
 print(arr)
