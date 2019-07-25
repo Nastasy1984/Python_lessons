@@ -20,7 +20,7 @@ def timeit(f):
         start=time.time()
         f(*args)
         end=time.time()
-        print("Время выполнения функции " + str(start - end) + " секунд")
+        print("Время выполнения функции " + str(end - start) + " секунд")
     return wrap
 
 @timeit
@@ -34,3 +34,10 @@ def testFunc1(a):
     print("gagaga" * a)
 
 testFunc1(5)
+
+@timeit
+def testFunc2(n):
+    for i in range(0, 100000000):
+        n=i;
+
+testFunc2(0)
